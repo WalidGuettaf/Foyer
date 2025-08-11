@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/c0b9cbe7c6.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shop</title>
+</head>
+<body>
+<header>
+    <button id="close-nav" class="fa-solid fa-xmark" onclick="closeNav()"></button>
+    <nav id="nav-links">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <button id="open-nav" class="fa-solid fa-bars" onclick="openNav()"></button>
+</header>
+<main>
+<section id="home">
+    <div class="date"></div>
+    <div class="welcome-parent"><p class="welcome">Welcome to Abdelkader's shop</p></div>
+    <div class="status"><span class="thestore">The shop is : </span> <span id="shop-status">Loading...</span></div>
+</section>
+<section id="about">
+    <h1 class="title">About us</h1>
+    <p class="discription">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi sunt, impedit deserunt et illo architecto accusantium cumque quasi id quo a perferendis blanditiis ipsa repudiandae.
+    </p>
+</section>
+<section id="gallery">
+    <h1 class="title">Gallery</h1>
+    <div class="pics">
+        <img src="/imgs/match.jpg"  class="img-gallery" onclick="view(this)">
+        <img src="/imgs/1.jpg"  class="img-gallery" onclick="view(this)">
+        <img src="/imgs/2.jpg"  class="img-gallery" onclick="view(this)">
+        <img src="/imgs/3.jpg"  class="img-gallery" onclick="view(this)">
+        <img src="/imgs/4.jpg"  class="img-gallery" onclick="view(this)">
+
+    </div>
+
+</section>
+<section id="contact">
+    <h1 class="title">contact us</h1>
+    <form action="" class="contact-form">
+    <div class="form-eleme">
+        <label for="firstname">First name :</label>
+        <input type="text" id="firstname" class="nameandemail" placeholder="First name" required>
+    </div>
+    <div class="form-eleme">
+        <label for="familyname">Family name :</label>
+        <input type="text" id="familyname" class="nameandemail" placeholder="Family name" required>
+    </div>
+    <div class="form-eleme">
+        <label for="email">Email :</label>
+        <input type="email" id="email" class="nameandemail" placeholder="Email" required>
+    </div>
+    <div class="form-eleme">
+        <label for="message">Message</label>
+        <textarea name="" id="message" ></textarea>
+    </div>
+
+    <button id="sendcontact" onclick="sendMessage()">Send</button>
+    </form>
+
+</section>
+</main>
+<div class="view-img">
+    <button id="close-view" onclick="unview()" class="fa-solid fa-xmark"></button>
+    <img id="viewedImg" src="" alt="">
+</div>
+<footer><span class="dev">@Walid GT</span> <span class="dev">@Haf Cha</span></footer>
+    <script src="script.js"></script>
+</body>
+</html>
