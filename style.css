@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Mozilla+Headline:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');*{
     scroll-behavior: smooth;
     margin: 0;padding: 0;box-sizing: border-box; font-family: "Mozilla Headline", sans-serif;color: #fff;
 }
@@ -243,9 +242,14 @@ font-size: 1.5rem;margin-right: 20px;white-space:nowrap;
     height: 70px;padding: 5px ;font-size: 1.2rem;
 }
 #contact .contact-form button{
-    padding: 10px 20px; border-radius: 20px;font-size: 1.6rem; margin: auto;
+    padding: 10px 20px; border-radius: 20px;
+    font-size: 1.6rem;
+     margin: auto;
     border:solid black 1px;
     transition: 0.3s ease;
+    color: #000;
+}
+#contact input,textarea{
     color: #000;
 }
 #contact .contact-form button:hover{
@@ -267,10 +271,18 @@ font-size: 1.5rem;margin-right: 20px;white-space:nowrap;
 }
 footer{
     background: linear-gradient(135deg, #000, #092440);
+    padding: 10px 250px;
+}
+footer .devs{
     display: flex;
     justify-content: space-between;
-    padding: 10px 250px;
     font-size: 1.6rem;
+}
+footer .pray{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    font-family: cairo;
 }
 @media screen and (max-width:900px) {
     header,#nav-links{

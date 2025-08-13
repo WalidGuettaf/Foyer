@@ -65,3 +65,21 @@ function unview(){
     document.querySelector("footer").style.filter="blur()";
 
 }
+const sendBtn=document.querySelector("#sendcontact")
+function sendMsg(){
+  const firstNameEle=document.querySelector("#firstname")
+const familyNameEle=document.querySelector("#familyname")
+const emailEle=document.querySelector("#email")
+const msgEle=document.querySelector("#message")
+const body={
+  first_name:firstNameEle.value,
+  family_name:familyNameEle.value,
+  email:emailEle.value,
+  message:msgEle.value
+}
+axios.post(`https://foyer-9vzz.onrender.com/comment`,body)
+}
+sendBtn.addEventListener("click",(e)=>{
+  sendMsg()
+})
+

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="/node_modules/axios/dist/axios.min.js"></script>
     <script src="https://kit.fontawesome.com/c0b9cbe7c6.js" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
@@ -61,10 +62,10 @@
     </div>
     <div class="form-eleme">
         <label for="message">Message</label>
-        <textarea name="" id="message" ></textarea>
+        <textarea id="message" ></textarea>
     </div>
 
-    <button id="sendcontact" onclick="sendMessage()">Send</button>
+    <button id="sendcontact">Send</button>
     </form>
 
 </section>
@@ -73,7 +74,10 @@
     <button id="close-view" onclick="unview()" class="fa-solid fa-xmark"></button>
     <img id="viewedImg" src="" alt="">
 </div>
-<footer><span class="dev">@Walid GT</span> <span class="dev">@Haf Cha</span></footer>
+<footer>
+    <div class="devs"><span class="dev">@Walid GT</span> <span class="dev">@Haf Cha</span></div>
+    <div class="pray">لا تنسوا الدعاء للوالدين بالرحمة </div>
+</footer>
     <script src="script.js"></script>
 </body>
 </html>
