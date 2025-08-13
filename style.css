@@ -133,7 +133,7 @@ header{
 
 #about{
     color: #000;
-    padding: 90px 80px;
+    padding: 90px 100px;
     background-color: #fff;
 }
 #about .title{
@@ -151,6 +151,7 @@ header{
     margin: 10px auto;
     display: block;
     background: violet;
+    border-radius: 5px;
 }
 #about .discription{
     color: #000;
@@ -176,6 +177,7 @@ header{
     margin: 10px auto 50px;
     display: block;
     background: violet;
+    border-radius: 5px;
 }
 #gallery .pics{
     display: grid;
@@ -279,10 +281,21 @@ footer .devs{
     font-size: 1.6rem;
 }
 footer .pray{
+    direction: rtl;
     margin-top: 10px;
     display: flex;
     justify-content: center;
     font-family: cairo;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    display: block;
+
+}
+footer .pray::before{
+    content: "- ";
+    display: inline;
+    width: fit-content;
 }
 @media screen and (max-width:900px) {
     header,#nav-links{
@@ -319,6 +332,9 @@ footer .pray{
     #gallery .pics{
         grid-template-columns: repeat(2,1fr);
     }
+    footer{
+        padding: 10px 30px;
+    }
 }
 @media screen and (max-width: 600px) {
     #home .welcome {
@@ -352,5 +368,9 @@ footer .pray{
       }
       footer{
         padding: 10px 40px;
+      }
+      footer .pray{
+        font-size: 1rem;
+
       }
 }
