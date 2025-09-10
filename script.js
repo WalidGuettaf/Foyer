@@ -65,6 +65,7 @@ function unview(){
     document.querySelector("footer").style.filter="blur()";
 
 }
+//api calls //
 const sendBtn=document.querySelector("#sendcontact")
 function sendMsg(){
   const firstNameEle=document.querySelector("#firstname")
@@ -82,4 +83,10 @@ axios.post(`https://foyer-9vzz.onrender.com/comment`,body)
 sendBtn.addEventListener("click",(e)=>{
   sendMsg()
 })
-
+//end api calls//
+document.addEventListener("click",(e)=>{
+  if(!nav.contains(e.target) && !header.contains(e.target) ){
+    nav.classList.remove("nav-open")
+    header.classList.remove("nav-open")
+  }
+})
